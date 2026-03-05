@@ -1,48 +1,87 @@
-# WhatsApp Story Bot
+# 📖 Chats to Story — WhatsApp Story Bot
 
-This project converts WhatsApp/Inatagram chat screenshots/any url into creative short stories using OCR and AI.
+Turn your WhatsApp chat screenshots into creative AI-generated stories! 🤖✨
 
-## Features
-- Extracts text from WhatsApp chat screenshots (local file or URL)
-- Cleans and fixes garbled OCR text
-- Generates a story in your chosen tone (Dramatic, Funny, Romantic, Thriller)
-- Saves the story to `story.txt`
+---
 
-## How It Works
-1. **OCR**: Uses Tesseract to extract text from images
-2. **Text Cleaning**: Removes noise and unreadable lines
-3. **Story Generation**: Uses Groq LLM to turn chat into a story
+## 🌟 Features
 
-## Requirements
-- Python 3.8+
-- Tesseract OCR (Install from https://github.com/tesseract-ocr/tesseract)
-- API key for Groq (set in `.env` as `GROQ_API_KEY`)
+- 📸 **Screenshot Input** — Just paste a URL or local image path
+- 🔍 **OCR Text Extraction** — Reads text directly from images using Tesseract
+- 🧹 **Smart Text Cleaning** — Filters out garbled OCR noise automatically
+- 🤖 **AI Story Generation** — Powered by Groq (LLaMA 3.3) for fast, free generation
+- 🎭 **4 Story Tones** — Dramatic, Funny, Romantic, or Thriller
+- 💾 **Auto Save** — Story is saved to `story.txt` after generation
 
-## Setup
-1. Install dependencies:
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Install Tesseract and set its path in `story_bot.py`:
-   ```python
-   pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-   ```
-3. Add your Groq API key to `.env`:
-   ```env
-   GROQ_API_KEY=your_key_here
-   ```
+---
 
-## Usage
-Run the bot:
+## 🛠️ Tech Stack
+
+- Python 3.11
+- [Tesseract OCR](https://github.com/UB-Mannheim/tesseract/wiki)
+- [pytesseract](https://pypi.org/project/pytesseract/)
+- [Pillow](https://pypi.org/project/Pillow/)
+- [Groq API](https://console.groq.com) (LLaMA 3.3 70B)
+- [python-dotenv](https://pypi.org/project/python-dotenv/)
+
+---
+
+## 🚀 Getting Started
+
+### 1. Clone the repo
+```bash
+git clone https://github.com/confusedengineer-Farah/chats-to-story.git
+cd chats-to-story
+```
+
+### 2. Install dependencies
+```bash
+pip install pytesseract pillow requests groq python-dotenv
+```
+
+### 3. Install Tesseract Engine
+Download and install from:
+👉 https://github.com/UB-Mannheim/tesseract/wiki
+
+Then add to PATH:
+```
+C:\Program Files\Tesseract-OCR
+```
+
+### 4. Setup your API key
+Create a `.env` file in the project folder:
+```
+GROQ_API_KEY=your_groq_api_key_here
+```
+
+Get your free Groq API key at 👉 https://console.groq.com
+
+### 5. Run the bot
 ```bash
 python story_bot.py
 ```
-- Enter the image path or URL when prompted
-- Choose the story tone
-- The generated story will be saved to `story.txt`
 
-## Example
-![Example Screenshot](example.png)
+---
 
-## License
-MIT License
+## 📸 How to Use
+
+1. Export or screenshot a WhatsApp chat
+2. Run the bot and enter the image path or URL
+3. Choose your story tone (Dramatic, Funny, Romantic, Thriller)
+4. Get your AI-generated story instantly!
+5. Find the saved story in `story.txt`
+
+---
+
+## ⚠️ Important
+
+- Never commit your `.env` file — it's already in `.gitignore` ✅
+- Works best with clear, high-resolution screenshots
+
+---
+
+## 👨‍💻 Author
+
+Made with ❤️ by [confusedengineer-Farah](https://github.com/confusedengineer-Farah)
+
+> *"Don't go fast — build dreams slowly and meaningfully."*
