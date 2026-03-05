@@ -78,9 +78,10 @@ print("1. Dramatic 🎭")
 print("2. Funny 😂")
 print("3. Romantic 💕")
 print("4. Thriller 😱")
-choice = input("Enter 1-4: ")
+print("5. Horror")
+choice = input("Enter 1-5: ")
 
-tones = {"1": "dramatic", "2": "funny", "3": "romantic", "4": "thriller"}
+tones = {"1": "dramatic", "2": "funny", "3": "romantic", "4": "thriller", "5":"Horror"}
 tone = tones.get(choice, "dramatic")
 
 print("\n⏳ Generating your story...")
